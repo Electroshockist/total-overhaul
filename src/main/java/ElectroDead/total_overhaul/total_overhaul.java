@@ -1,5 +1,6 @@
 package ElectroDead.total_overhaul;
 
+import ElectroDead.total_overhaul.init.ModBlocks;
 import ElectroDead.total_overhaul.init.ModItems;
 import ElectroDead.total_overhaul.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,9 @@ public class total_overhaul {
 		System.out.println("preinit");
 		ModItems.init();
 		MinecraftForge.EVENT_BUS.register(new ModItems());
+		
+		ModBlocks.init();
+		MinecraftForge.EVENT_BUS.register(new ModBlocks());
 	}
 	
 	@EventHandler

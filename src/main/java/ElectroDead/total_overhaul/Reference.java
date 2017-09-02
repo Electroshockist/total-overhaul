@@ -31,4 +31,24 @@ public class Reference {
 			return registryName;
 		}
 	}
+	
+	public static enum TO_Blocks{
+		GRAY("gray", "blockgray");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		TO_Blocks(String unlocalizedName, String registryName){
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
 }
