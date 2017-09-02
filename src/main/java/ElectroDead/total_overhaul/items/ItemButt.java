@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 
 public class ItemButt extends Item {
 	public ItemButt() {
-		setUnlocalizedName(Reference.Items.BUTT.getUnlocalizedName());
-		setRegistryName(Reference.Items.BUTT.getRegistryName());
+		setUnlocalizedName(Reference.TO_Items.BUTT.getUnlocalizedName());
+		setRegistryName(Reference.TO_Items.BUTT.getRegistryName());
 	}
 }

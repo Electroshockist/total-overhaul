@@ -11,13 +11,33 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "ElectroDead.total_overhaul.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "ElectroDead.total_overhaul.proxy.ServerProxy";
 
-	public static enum Items{
-		BUTT("butt", "ItemButt");
+	public static enum TO_Items{
+		BUTT("butt", "itembutt"),
+		ORANGE("orange", "itemorange");
 		
 		private String unlocalizedName;
 		private String registryName;
 		
-		Items(String unlocalizedName, String registryName){
+		TO_Items(String unlocalizedName, String registryName){
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
+	
+	public static enum TO_Blocks{
+		ANYTHING("anything", "blockanything");
+		private String unlocalizedName;
+		private String registryName;
+		
+		TO_Blocks(String unlocalizedName, String registryName){
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
 		}

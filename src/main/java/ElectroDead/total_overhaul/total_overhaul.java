@@ -24,7 +24,6 @@ public class total_overhaul {
 	public void preInit(FMLPreInitializationEvent event){
 		System.out.println("preinit");
 		ModItems.init();
-		ModItems.register();
 		MinecraftForge.EVENT_BUS.register(new ModItems());
 	}
 	
