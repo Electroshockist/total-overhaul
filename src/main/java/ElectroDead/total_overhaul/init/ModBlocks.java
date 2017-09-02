@@ -1,6 +1,6 @@
 package ElectroDead.total_overhaul.init;
 
-import blocks.BlockAnything;
+import ElectroDead.total_overhaul.blocks.BlockAnything;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

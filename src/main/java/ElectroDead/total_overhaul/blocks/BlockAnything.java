@@ -1,4 +1,4 @@
-package blocks;
+package ElectroDead.total_overhaul.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
