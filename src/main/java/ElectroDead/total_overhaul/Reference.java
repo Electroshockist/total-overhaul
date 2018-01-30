@@ -13,7 +13,8 @@ public class Reference {
 
 	public static enum TO_Items{
 		BUTT("butt", "itembutt"),
-		ORANGE("orange", "itemorange");
+		ORANGE("orange", "itemorange"), 
+		TISSUE("tissue", "itemtissue");
 		
 		private String unlocalizedName;
 		private String registryName;
