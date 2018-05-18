@@ -19,17 +19,31 @@ public class Reference {
 		private String unlocalizedName;
 		private String registryName;
 		
+		//constructor
 		TO_Items(String unlocalizedName, String registryName){
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
 		}
 		
-		public String getUnlocalizedName() {
-			return unlocalizedName;
+		//return registry and unlocalized names
+		public String getUnlocalizedName() { return unlocalizedName; }		
+		public String getRegistryName() { return registryName; }
+	}
+	
+	public static enum TO_Blocks{
+		FLESH("flesh", "blockflesh");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		//constructor
+		TO_Blocks(String unlocalizedName, String registryName){
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
 		}
 		
-		public String getRegistryName() {
-			return registryName;
-		}
+		//return registry and unlocalized names
+		public String getUnlocalizedName() { return unlocalizedName; }		
+		public String getRegistryName() { return registryName; }
 	}
 }
