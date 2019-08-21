@@ -10,7 +10,7 @@ import net.minecraft.entity.passive.EntityTameable;
 //handles natural breeding and dying of animals
 public class AnimalHandler {
 	private static Random rand = new Random();
-	private static int deathRate = 10000, breedRate = 2500;
+	private static final int deathRate = 10000, breedRate = 2500;
 
 	public static void onRecieveAnimal(Entity entity) {
 		//do not run if animal is tameable or a horse
