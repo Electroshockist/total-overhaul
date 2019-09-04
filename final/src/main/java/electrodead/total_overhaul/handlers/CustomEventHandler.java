@@ -12,14 +12,10 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
 public class CustomEventHandler {
 
-	AnimalHandler animalHandler;
-
-	@SubscribeEvent
-	public void onClientTickEvent(ClientTickEvent event) {
-		VoidFog.update();
-
-
-	}
+//	@SubscribeEvent
+//	public void onClientTickEvent(ClientTickEvent event) {
+//		VoidFog.update();
+//	}
 
 	@SubscribeEvent
 	public void onLivingUpdate(LivingUpdateEvent event) {

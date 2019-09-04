@@ -9,23 +9,20 @@ import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 
 public class DropHandler {
 
-	private static Entity entity;
-
-	private static boolean checkConditions(Entity e) {
+	private static boolean checkConditions(Entity entity) {
 		// set entity to
-		if (e instanceof EntityBat) {
-			entity = e;
+		if (entity instanceof EntityBat) {
 			return true;
 		}
 		
 		//todo add child animals to list
-//		else if (e instanceof EntityAnimal) {
-//			EntityAnimal entityAnimal = (EntityAnimal) entity;
-//			if (entityAnimal.isChild()) {
-//				entity = e;
-//				return true;
-//			}
-//		}
+		if (entity instanceof EntityAnimal) {
+			System.out.println("animal");
+			EntityAnimal entityAnimal = (EntityAnimal) entity;
+			if (entityAnimal.isChild()) {
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -34,7 +31,7 @@ public class DropHandler {
 
 		// summon XP if entity matches conditions
 		if (checkConditions(event.getEntity())) {
-			summonXpAtEntity(entity);
+			summonXpAtEntity(event.getEntity());
 		}
 
 	}
