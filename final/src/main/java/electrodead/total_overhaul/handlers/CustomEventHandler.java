@@ -1,12 +1,8 @@
 package electrodead.total_overhaul.handlers;
 
-import java.util.Random;
-
 import electrodead.total_overhaul.visual_effects.VoidFog;
 import net.minecraft.block.BlockRailBase;
-import net.minecraft.client.Minecraft;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.world.World;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -35,9 +31,9 @@ public class CustomEventHandler {
 		DropHandler.onXPDrop(event);
 	}
 
-//	public void onItemDrop(LivingDropsEvent event) {
-//		DropHandler.onItemDrop(event);
-//	}
+	public void onItemDrop(LivingDropsEvent event) {
+		DropHandler.onItemDrop(event);
+	}
 
 	@SubscribeEvent
 	public void onInteractEntity(PlayerInteractEvent.EntityInteract event) {
