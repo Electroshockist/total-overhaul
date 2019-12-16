@@ -1,0 +1,16 @@
+[
+{
+  "modid": "to",
+  "name": "Total Overhaul",
+  "description": "Better than horses.",
+  "version": "1.0",
+  "mcversion": "1.12",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Electroshockist","ItsDeadEnd"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

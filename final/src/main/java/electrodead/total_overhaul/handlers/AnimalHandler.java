@@ -31,13 +31,12 @@ public class AnimalHandler {
 						// check if animal is not already in love
 						if (!e.isInLove()) {
 							e.setInLove(null);
-							// System.out.println(e.getName() + " is now in love");
 							return;
 						}
 					}
 					// 1/deathRate chance of running
 					if (rand.nextInt(deathRate) == deathRate - 1) {
-						e.setDead();
+						e.setHealth(0);
 						return;
 					}
 				}
