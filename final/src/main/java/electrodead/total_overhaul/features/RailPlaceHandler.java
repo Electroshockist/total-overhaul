@@ -1,4 +1,4 @@
-package electrodead.total_overhaul.handlers;
+package electrodead.total_overhaul.features;
 
 import net.minecraftforge.event.world.BlockEvent;
 

@@ -3,6 +3,7 @@ package electrodead.total_overhaul;
 import electrodead.total_overhaul.handlers.CustomEventHandler;
 import electrodead.total_overhaul.proxy.CommonProxy;
 import electrodead.total_overhaul.util.Reference;
+import electrodead.total_overhaul.visual_effects.VoidFog;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -34,6 +35,7 @@ public class Main {
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event){
 		MinecraftForge.EVENT_BUS.register(new CustomEventHandler());
+		MinecraftForge.EVENT_BUS.register(new VoidFog());
 				
 	}
 

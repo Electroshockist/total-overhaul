@@ -1,4 +1,4 @@
-package electrodead.total_overhaul.handlers;
+package electrodead.total_overhaul.features;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityXPOrb;
@@ -7,7 +7,7 @@ import net.minecraft.entity.passive.EntityBat;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 
-public class DropHandler {
+public class MobDropModifier {
 
 	private static boolean checkConditions(Entity entity) {
 		// set entity to
@@ -15,14 +15,16 @@ public class DropHandler {
 			return true;
 		}
 		
-		//todo add child animals to list
-		if (entity instanceof EntityAnimal) {
-			System.out.println("animal");
-			EntityAnimal entityAnimal = (EntityAnimal) entity;
-			if (entityAnimal.isChild()) {
-				return true;
-			}
-		}
+		//this does not work, since the game does not even check if child animals drop XP
+		//TODO: figure out how to get child animals to drop drops and exp
+		
+//		if (entity instanceof EntityAnimal) {
+//			EntityAnimal entityAnimal = (EntityAnimal) entity;
+//			if (entityAnimal.isChild()) {
+//				return true;
+//			}
+//		}
+		
 		return false;
 	}
 
