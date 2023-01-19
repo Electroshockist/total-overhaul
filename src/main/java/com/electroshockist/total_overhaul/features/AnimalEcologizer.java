@@ -10,7 +10,7 @@ import net.minecraft.world.entity.animal.horse.AbstractHorse;
 public class AnimalEcologizer {
 	private static Random rand = new Random();
 
-	private static final int deathRate = 4, breedRate = 1;
+	private static final int deathRate = 6, breedRate = 1;
 	private static final int ecologyScalar = 2500;
 
 	private static final int totalBreedRate = breedRate * ecologyScalar, totalDeathRate = deathRate * ecologyScalar;
@@ -25,8 +25,9 @@ public class AnimalEcologizer {
 			return;
 		if (entity instanceof Animal) {
 			Animal e = (Animal) entity;
-			// only run if mob is not already in love, can despawn and is an adult
-			if (!e.isInLove() /*&& !e.isNoDespawnRequired() && e.getGrowingAge() == 0*/) {
+			
+			//check if the mob is eligible for ecolization
+			if (canEcologize(e)) {
 				// 1/totalBreedRate chance of running
 				if (rand.nextInt(totalBreedRate) == totalBreedRate - 1) {
 					e.setInLove(null);
@@ -39,5 +40,10 @@ public class AnimalEcologizer {
 				}
 			}
 		}
+	}
+	
+	private static boolean canEcologize(Animal a) {
+		// only run if mob is not already in love, can despawn and is an adult
+		return !a.isInLove() && !a.isBaby() && !a.isPersistenceRequired();
 	}
 }

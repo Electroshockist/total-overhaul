@@ -1,6 +1,7 @@
 package com.electroshockist.total_overhaul;
 
-import com.electroshockist.total_overhaul.handlers.CustomEventHandler;
+import com.electroshockist.total_overhaul.init.ItemInit;
+import com.electroshockist.total_overhaul.util.handlers.CustomEventHandler;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,6 +27,8 @@ public class TotalOverhaul {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
 		// Register the processIMC method for modloading
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+		
+		ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 		// Register ourselves for server and other game events we are interested in
 		MinecraftForge.EVENT_BUS.register(this);

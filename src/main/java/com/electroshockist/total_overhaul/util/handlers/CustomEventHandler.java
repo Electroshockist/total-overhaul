@@ -1,4 +1,4 @@
-package com.electroshockist.total_overhaul.handlers;
+package com.electroshockist.total_overhaul.util.handlers;
 
 import com.electroshockist.total_overhaul.features.AnimalEcologizer;
 import com.electroshockist.total_overhaul.features.CreativeInstaTame;
@@ -6,7 +6,6 @@ import com.electroshockist.total_overhaul.features.MobDropModifier;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
-import net.minecraftforge.event.TickEvent.ClientTickEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
@@ -15,10 +14,11 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CustomEventHandler {
-	@SubscribeEvent
-	public void onClientTickEvent(ClientTickEvent event) {
-		//VoidFog.updateParticles();
-	}
+//	@SubscribeEvent
+//	@OnlyIn(Dist.CLIENT)
+//	public void onClientTickEvent(ClientTickEvent event) {
+//		VoidFog.updateParticles();
+//	}
 
 	//@SideOnly(Side.CLIENT)
 //	@SubscribeEvent

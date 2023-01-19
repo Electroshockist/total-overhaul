@@ -1,8 +1,8 @@
 package com.electroshockist.total_overhaul.features;
 
-import com.electroshockist.total_overhaul.util.SummonXp;
-
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.ambient.Bat;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
@@ -33,7 +33,7 @@ public class MobDropModifier {
 
 		// summon XP if entity matches conditions
 		if (checkConditions(event.getEntity())) {
-			SummonXp.summon(event.getEntity());
+			ExperienceOrb.award((ServerLevel) event.getEntity().level, event.getEntity().position(), 1);
 		}
 
 	}
