@@ -1,8 +1,8 @@
 package com.electroshockist.total_overhaul.util.handlers;
 
-import com.electroshockist.total_overhaul.features.AnimalEcologizer;
-import com.electroshockist.total_overhaul.features.CreativeInstaTame;
-import com.electroshockist.total_overhaul.features.MobDropModifier;
+import com.electroshockist.total_overhaul.features.systems.AnimalEcologizer;
+import com.electroshockist.total_overhaul.features.systems.CreativeInstaTame;
+import com.electroshockist.total_overhaul.features.systems.MobDropModifier;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;

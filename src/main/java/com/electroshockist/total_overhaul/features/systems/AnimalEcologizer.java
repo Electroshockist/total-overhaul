@@ -1,4 +1,4 @@
-package com.electroshockist.total_overhaul.features;
+package com.electroshockist.total_overhaul.features.systems;
 
 import java.util.Random;
 
@@ -15,35 +15,28 @@ public class AnimalEcologizer {
 
 	private static final int totalBreedRate = breedRate * ecologyScalar, totalDeathRate = deathRate * ecologyScalar;
 
-	public static void onRecieveAnimal(Entity entity) {
-		checkAnimalEcology(entity);
-	}
-
-	private static void checkAnimalEcology(Entity entity) {
+	public static void onRecieveAnimal(Entity entity) {	
+		//TODO: modualte by nearby animals of type
 		// do not run if animal is tameable or a horse
-		if (entity instanceof TamableAnimal || entity instanceof AbstractHorse)
-			return;
-		if (entity instanceof Animal) {
+		if (entity instanceof Animal && !(entity instanceof TamableAnimal || entity instanceof AbstractHorse)) {
 			Animal e = (Animal) entity;
-			
-			//check if the mob is eligible for ecolization
+
+			// check if the mob is eligible for ecolization
 			if (canEcologize(e)) {
 				// 1/totalBreedRate chance of running
 				if (rand.nextInt(totalBreedRate) == totalBreedRate - 1) {
 					e.setInLove(null);
-					return;
 				}
 				// 1/totalDeathRate chance of killing a mob
-				if (rand.nextInt(totalDeathRate) == totalDeathRate - 1) {
+				else if (rand.nextInt(totalDeathRate) == totalDeathRate - 1) {
 					e.kill();
-					return;
 				}
 			}
 		}
 	}
-	
+
 	private static boolean canEcologize(Animal a) {
 		// only run if mob is not already in love, can despawn and is an adult
-		return !a.isInLove() && !a.isBaby() && !a.isPersistenceRequired();
+		return !a.isInLove() && !a.isBaby() && !a.isPersistenceRequired() && a.canFallInLove();
 	}
 }

@@ -1,0 +1,23 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "total_overhaul:block/rotatable_block",
+            "y": 90
+        },
+        
+        "facing=east": {
+            "model": "total_overhaul:block/rotatable_block",
+            "y": 180
+        },
+
+        "facing=south": {
+            "model": "total_overhaul:block/rotatable_block",
+            "y": 270
+        },
+
+        "facing=west": {
+            "model": "total_overhaul:block/rotatable_block",
+            "y": 0
+        }
+    }
+}

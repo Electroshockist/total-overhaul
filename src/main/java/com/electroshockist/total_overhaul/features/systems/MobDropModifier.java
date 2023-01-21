@@ -1,4 +1,4 @@
-package com.electroshockist.total_overhaul.features;
+package com.electroshockist.total_overhaul.features.systems;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
