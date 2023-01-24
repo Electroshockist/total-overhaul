@@ -3,6 +3,7 @@ package com.electroshockist.total_overhaul.init;
 import java.util.function.Function;
 
 import com.electroshockist.total_overhaul.features.blocks.HyperTestBlock;
+import com.electroshockist.total_overhaul.features.blocks.RotatableBlock;
 import com.electroshockist.total_overhaul.ui.CreativeTabs;
 import com.electroshockist.total_overhaul.util.Reference;
 import com.google.common.base.Supplier;
@@ -34,7 +35,7 @@ public class BlockInit {
 			object -> () -> new BlockItem(object.get(),new Item.Properties().tab(CreativeTabs.MAIN_TAB)));
 	
 	public static final RegistryObject<Block> ROTATABLE_BLOCK = register("rotatable_block",
-			() -> new HyperTestBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.WOOD)),		
+			() -> new RotatableBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.WOOD)),		
 			object -> () -> new BlockItem(object.get(),new Item.Properties().tab(CreativeTabs.MAIN_TAB)));
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block){

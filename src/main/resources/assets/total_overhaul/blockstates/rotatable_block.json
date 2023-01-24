@@ -2,22 +2,22 @@
     "variants": {
         "facing=north": {
             "model": "total_overhaul:block/rotatable_block",
-            "y": 90
+            "y": 0
         },
         
         "facing=east": {
             "model": "total_overhaul:block/rotatable_block",
-            "y": 180
+            "y": 90
         },
 
         "facing=south": {
             "model": "total_overhaul:block/rotatable_block",
-            "y": 270
+            "y": 180
         },
 
         "facing=west": {
             "model": "total_overhaul:block/rotatable_block",
-            "y": 0
+            "y": 270
         }
     }
 }
