@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "total_overhaul:test_block",
+        "total_overhaul:rotatable_block",
+        "minecraft:grass_block"
+    ]
+}

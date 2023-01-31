@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "total_overhaul:item/test_item"
-    }
-}

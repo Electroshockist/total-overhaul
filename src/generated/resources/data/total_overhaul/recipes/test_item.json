@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bbb",
+    "aca",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "total_overhaul:test_block"
+    },
+    "b": {
+      "tag": "total_overhaul:cool_items"
+    },
+    "c": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "total_overhaul:test_item",
+    "count": 4
+  }
+}

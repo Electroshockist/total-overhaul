@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "total_overhaul:block/test_block"
+    }
+  }
+}

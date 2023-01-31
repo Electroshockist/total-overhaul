@@ -15,7 +15,7 @@ public class CreativeTabs {
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack makeIcon() {
 			// TODO Auto-generated method stub
-			return new ItemStack(ItemInit.ITEM.get());
+			return new ItemStack(ItemInit.TEST_ITEM.get());
 		}
 	};
 }
