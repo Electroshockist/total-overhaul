@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "total_overhaul:test_block"
-  },
-  "result": "total_overhaul:rotatable_block",
-  "experience": 0.4,
-  "cookingtime": 50
-}
