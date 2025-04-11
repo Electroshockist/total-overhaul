@@ -9,11 +9,5 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = TotalOverhaul.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
-    @SubscribeEvent
-    public static void  onLivingUpdate(LivingEvent.LivingTickEvent event){
-        var entity = event.getEntity();
-        if (entity instanceof Animal){
-            EcologyHandler.tryEcologize((Animal) entity);
-        }
-    }
+
 }

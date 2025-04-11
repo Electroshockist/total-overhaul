@@ -21,13 +21,13 @@ public class EcologyHandler {
     }
 
     private static boolean shouldMakeInLove(Animal animal){
-        return true;
+        //do not breed if too many nearby mobs
+        return isRandomChanceFulfilled(breedChancePerTick);
     }
 
     private static boolean shouldMakeDie(Animal animal){
-
         if(isRandomChanceFulfilled(deathChancePerTick)){
-
+            //do not kill if too few nearby mobs
             //multiply death chance by age
             return true;
         }
